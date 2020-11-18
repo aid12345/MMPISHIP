@@ -11,13 +11,13 @@ export default class MyWebView extends React.Component {
 
     if (navigation.state.params == undefined){
       barCodeData = ""
-      uritext = "http://mmpi-ship.mmpint.com/Main_Contents.asp";
+      uritext = "http://scm-ship.mmpint.com/Main_Contents.asp";
     }else{
       barCodeData = navigation.state.params.barCodeData;
       if (barCodeData.indexOf("http") !== -1){
         uritext = barCodeData
       }else{
-        uritext = 'http://mmpi-ship.mmpint.com/ship/ViewOrderPrint.asp?barCodeData=' + barCodeData
+        uritext = 'http://scm-ship.mmpint.com/ship/ViewOrderPrint.asp?barCodeData=' + barCodeData
       }     
     }
 //    console.log(uritext);
