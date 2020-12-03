@@ -27,7 +27,8 @@ export default class MyWebView extends React.Component {
         useWebKit={true} // IOS 에서는 webkit을 사용 하도록 설정
         javaScriptEnabled={true}
         originWhitelist={['*']}
-          
+        ref={ref => this.WEBVIEW_REF = ref}
+        style={{ justifyContent: 'center',alignItems: 'center',width:'100%',height:'100%',}}          
         source={{
           uri: uritext,
         }}
