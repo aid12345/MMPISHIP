@@ -132,8 +132,8 @@ android {
         applicationId "com.mmpiship"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 3001
-        versionName "3001.0"
+        versionCode 3002
+        versionName "3002.0"
         missingDimensionStrategy 'react-native-camera', 'general' // <--- insert this line        
         // ndk {
         //     abiFilters "armeabi-v7a", "x86"
