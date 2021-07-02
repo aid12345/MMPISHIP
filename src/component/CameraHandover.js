@@ -26,7 +26,7 @@ class Camera extends React.Component {
             //console.log(resultData);
             if (resultData) {
               navigation.navigate('WebViewScreen', {
-                barCodeData: resultData,
+                barCodeData: resultData + "&&handover",
               });
             }
           }}
