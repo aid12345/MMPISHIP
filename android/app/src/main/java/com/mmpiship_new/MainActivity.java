@@ -1,4 +1,4 @@
-package com.mmpiship;
+package com.mmpiship_new;
 
 import com.facebook.react.ReactActivity;
 
