@@ -21,6 +21,7 @@ export default class MyWebView extends React.Component {
       cameraparamsplit = barCodeData.split('&&');     
       cameraparamsplit_QR = cameraparamsplit[0].split('=');
       
+
       switch(cameraparamsplit[1]) {
         case 'storage' :             
           texturl = "http://scm-ship.mmpint.com/ship/ViewStorageDate.asp?barCodeData="
@@ -38,7 +39,7 @@ export default class MyWebView extends React.Component {
 
       //바코드 QR 구분처리
       if (barCodeData.indexOf("http") !== -1){
-        uritext = texturl + cameraparamsplit_QR[1]
+        uritext = texturl + cameraparamsplit_QR[3]
       }else{
         uritext = texturl + cameraparamsplit[0]
       }     
