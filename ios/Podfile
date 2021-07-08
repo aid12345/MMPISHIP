@@ -8,6 +8,10 @@ target 'MMPISHIP' do
 
   use_react_native!(:path => config["reactNativePath"])
 
+  ##ios 권한추가
+  permissions_path = '../node_modules/react-native-permissions/ios'
+  pod 'Permission-Camera', :path => "#{permissions_path}/Camera"
+
   target 'MMPISHIPTests' do
     inherit! :complete
     # Pods for testing
