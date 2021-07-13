@@ -37,11 +37,12 @@ export default class MyWebView extends React.Component {
           break;
       }          
 
-      //바코드 QR 구분처리
+      //바코드 QR 구분처리 
+      //new Date() 같은 바코드 호출시 URL쿠키 & 세션값으로 스크립트 중복 방지
       if (barCodeData.indexOf("http") !== -1){
-        uritext = texturl + cameraparamsplit_QR[3]
+        uritext = texturl + cameraparamsplit_QR[3] + "&" +  new Date();   
       }else{
-        uritext = texturl + cameraparamsplit[0]
+        uritext = texturl + cameraparamsplit[0] + "&" + new Date();   
       }     
     }
     
@@ -51,6 +52,11 @@ export default class MyWebView extends React.Component {
       <WebView
         useWebKit={true} // IOS 에서는 webkit을 사용 하도록 설정
         javaScriptEnabled={true}
+        /* 쿠키값 초기화
+        incognito={true}
+        sharedCookiesEnabled={true}
+        cacheEnabled={true}
+        */
         originWhitelist={['*']}
         ref={ref => this.WEBVIEW_REF = ref}
         style={{ justifyContent: 'center',alignItems: 'center',width:'100%',height:'100%',}}          
